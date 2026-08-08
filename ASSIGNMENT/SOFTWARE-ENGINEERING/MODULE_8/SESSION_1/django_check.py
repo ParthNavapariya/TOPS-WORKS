@@ -1,0 +1,1 @@
+(.venv) parthnavapariya@Parths-MacBook-Air MODULE_8 % django-admin --version 6.1

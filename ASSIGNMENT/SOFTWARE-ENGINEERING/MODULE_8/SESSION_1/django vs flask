@@ -1,0 +1,18 @@
+Django:
+Full-featured framework
+Built-in admin panel
+ORM (database support) built-in
+Authentication built-in
+Large projects માટે ઉત્તમ
+Structure પહેલેથી નક્કી
+Learning થોડું લાંબું
+
+
+flask:
+Lightweight (micro) framework
+Admin panel નથી
+SQLAlchemy જેવી library અલગથી ઉમેરવી પડે
+Authentication પોતે બનાવવું પડે
+Small projects અને APIs માટે ઉત્તમ
+Flexible structure
+Learning સરળ
