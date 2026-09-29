@@ -1,0 +1,13 @@
+Question: ModelViewSet and DefaultRouter
+
+Answer:
+Using ModelViewSet with DefaultRouter reduces URL management overhead because we do not need to create separate URL patterns for each APIView. The router automatically generates the required URLs for Restaurants, Menus, and Orders and maps them to the ViewSet actions.
+
+ModelViewSet automatically handles these HTTP methods:
+- GET (list and retrieve)
+- POST (create)
+- PUT (update)
+- PATCH (partial update)
+- DELETE (destroy)
+
+So, instead of managing many separate URL patterns, we can register each ViewSet once with DefaultRouter.

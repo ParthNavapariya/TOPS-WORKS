@@ -1,0 +1,17 @@
+Question: Object-Level Permission for Orders
+
+Answer:
+The gap is that IsAuthenticated only checks whether the user is logged in. It does not check whether the requested order belongs to that user.
+
+Solution:
+Create a custom DRF permission class and override has_object_permission(). Check that the order's customer/user matches request.user.
+
+Example:
+class IsOrderOwner(BasePermission):
+    def has_object_permission(self, request, view, obj):
+        return obj.customer == request.user
+
+Then use:
+permission_classes = [IsAuthenticated, IsOrderOwner]
+
+This ensures a logged-in customer can access only their own orders, even if they change the order ID.

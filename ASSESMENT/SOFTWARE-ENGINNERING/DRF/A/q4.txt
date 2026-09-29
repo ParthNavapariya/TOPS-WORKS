@@ -1,0 +1,20 @@
+Question: DRF Pagination for Dish Search
+
+Answer:
+The most likely cause is that the API returns all dishes from 500+ restaurants in one response. This creates a large database query, large JSON response, and high network/serialization time.
+
+Recommended choice: CursorPagination, especially for a large and frequently changing dish list.
+
+PageNumberPagination:
+- Simple and easy to use.
+- Supports page numbers like ?page=2.
+- Easy for users to navigate to a specific page.
+- Can become slower for very large datasets because OFFSET-based queries can be expensive.
+
+CursorPagination:
+- Efficient for large datasets.
+- Uses a cursor instead of large offsets, giving more consistent performance.
+- Better when data changes frequently.
+- Does not easily allow jumping directly to a specific page.
+
+For 500+ restaurants and potentially thousands of dishes, CursorPagination is preferable when performance and scalability are the main concerns. PageNumberPagination is better when simple page-based navigation is more important.

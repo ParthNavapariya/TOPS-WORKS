@@ -1,0 +1,14 @@
+Question: Google Maps Geocoding API for Nearby Restaurants
+
+Answer:
+In the DRF view, accept the user's address string through a POST request. Send the address to the Google Maps Geocoding API using the requests library and the API key stored securely in Django settings/environment variables.
+
+Steps:
+1. Get the address from request.data.
+2. Call Google Geocoding API with the address.
+3. Extract latitude and longitude from the response.
+4. Compare these coordinates with restaurant latitude/longitude.
+5. Filter restaurants within a required radius, such as 5 km.
+6. Return the nearby restaurants as JSON.
+
+For large datasets, use PostGIS/geospatial queries for efficient distance-based filtering instead of calculating the distance for every restaurant in Python.

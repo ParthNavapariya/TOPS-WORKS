@@ -1,0 +1,9 @@
+2. Restaurant Management API Scenario
+
+ModelSerializer is a better choice because it automatically creates fields from the model, reduces coding effort, and provides built-in validation.
+
+Field-Level Validations:
+1. Menu Item Name Validation – Name should not be empty and must have a valid length.
+2. Price Validation – Price should be greater than 0 and cannot be negative.
+
+These validations help maintain data integrity and accuracy of menu items.

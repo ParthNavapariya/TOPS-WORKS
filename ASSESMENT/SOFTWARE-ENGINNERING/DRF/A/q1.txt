@@ -1,0 +1,16 @@
+REST Statelessness (Easy Language)
+
+Statelessness means the server does not remember information from previous requests.
+
+In a food delivery API, every request must contain all required information, such as the user token or user ID.
+
+Example:
+When a user logs in, they get a token. For checking restaurants, placing orders, or tracking delivery, the token must be sent with every request.
+
+Effect on Session Data:
+• Server does not store user session data.
+• Each request is independent.
+• API becomes faster and easier to scale.
+• Mobile app and web app can use the same API easily.
+
+Therefore, user session data is sent with each request instead of being stored on the server.
